@@ -1,0 +1,21 @@
+
+
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Valoración</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--Recorremos con un for el listado de videojuegos y pintamos con {{}} solo los atributos que queramos
+      Además, añadimos un evento click que llamará a la función para poder ver el detalle del videojuego-->
+      <tr *ngFor="let videojuego of listaVideojuegos" (click)="verDetalle(videojuego)">
+        <td>{{videojuego.id}}</td>
+        <td>{{videojuego.titulo}}</td>
+        <td>{{videojuego.valoracion}}</td>
+     </tr>
+    </tbody>
+</table>
+
